@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  jenkins:
+    container_name: jenkins-Host
+    build: 
+      context: ./
+    volumes:
+       - ./jenkins_home:/var/jenkins/jenkins_home
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    networks:
+       - net1
+
+  
+
+networks:
+    net1:
+      
+
+    
